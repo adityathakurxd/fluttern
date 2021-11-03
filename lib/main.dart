@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fluttern/constants/constants.dart';
 import 'package:fluttern/screens/home_screen.dart';
 
 void main() {
@@ -13,12 +14,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      title: 'Team Aditya',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.from(
+        colorScheme: ColorScheme.light(
+          primary: kPrimaryColor,
+          secondary: kAccentColor,
+        ),
       ),
       home: const HomeScreen(),
     );
   }
 }
-
