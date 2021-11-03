@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
             error: (err, stack) => Text('Error: $err'),
             data: (value) {
               return GridView.count(
-                crossAxisCount: MediaQuery.of(context).size.width > 800 ? 3 : (MediaQuery.of(context).size.width > 400 ? 2:1),
+                crossAxisCount: MediaQuery.of(context).size.width > 800 ? 4 : (MediaQuery.of(context).size.width > 400 ? 2:1),
                 children: List.generate(value.length, (index) {
                   return Center(
                     child: Padding(
@@ -74,6 +74,7 @@ class HomeScreen extends StatelessWidget {
                               ),
                               Text(
                                   value[index].framework + ', ' + value[index].language,
+                                  overflow: TextOverflow.fade,
                                   style: kSubTitleText.copyWith(color: kBlackColor,fontSize: 8)
                               ),
                               const SizedBox(height: 20,),
