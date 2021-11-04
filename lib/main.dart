@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         }
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp(
-            title: 'Team Aditya',
+            title: 'Fluttern',
             debugShowCheckedModeBanner: false,
             theme: ThemeData.from(
               colorScheme: ColorScheme.light(
