@@ -57,21 +57,30 @@ class MemberScreen extends StatelessWidget {
                               const SizedBox(height: 20,),
                               Visibility(
                                 visible: value[index].isOpen == 'Yes'? true : false,
-                                child: Container(
-                                  height: 45,
-                                  width: 120,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: kPrimaryColor),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      const Icon(Icons.email),
-                                      const SizedBox(
-                                        width: 10,
-                                      ),
-                                      Text('Contact', style: kSubTitleText.copyWith(color: kBlackColor),),
-                                    ],
+                                child: GestureDetector(
+                                  onTap: () async {
+                                    final Uri emailLaunchUri = Uri(
+                                      scheme: 'mailto',
+                                      path: value[index].email,
+                                    );
+                                    await canLaunch(emailLaunchUri.toString()) ? await launch(emailLaunchUri.toString()) : throw 'Could not launch $_url';
+                                  },
+                                  child: Container(
+                                    height: 45,
+                                    width: 120,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: kPrimaryColor),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        const Icon(Icons.email),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text('Contact', style: kSubTitleText.copyWith(color: kBlackColor),),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
