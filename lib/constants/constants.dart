@@ -17,6 +17,6 @@ TextStyle kSubTitleText = GoogleFonts.poppins(
 );
 
 TextStyle kLightTitleText = GoogleFonts.poppins(
-  color: kPrimaryColor,
+  color: kBlackColor,
   fontSize: 20.0,
 );
