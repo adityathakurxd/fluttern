@@ -1,6 +1,7 @@
 # Fluttern
 
-Fluttern is a web app made with Flutter to list Flutter internships/jobs for the community. It uses Google Sheet as a backend, simplifying the whole listing process. Enteries can be made in Form which would automatically get lsited on the Web app!
+Fluttern is a web app made with Flutter to list Flutter internships/jobs for the community. 
+It uses Google Sheet as a backend, simplifying the whole listing process. Enteries can be made in Form which would automatically get listed on the Web app!
 
 ## Demo
 
